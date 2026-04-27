@@ -1,8 +1,12 @@
 #include "skreecustom.dtsi"
 
-//&left_encoder {
-//	status = "okay";
-//};
+&left_encoder_top {
+    status = "okay";
+};
+
+&left_encoder_bottom {
+    status = "okay";
+};
 
 &kscan0 {
     col-gpios
@@ -12,7 +16,7 @@
         , <&shifter 3 GPIO_ACTIVE_HIGH>
         , <&shifter 4 GPIO_ACTIVE_HIGH>
         , <&shifter 5 GPIO_ACTIVE_HIGH>
-//        , <&shifter 6 GPIO_ACTIVE_HIGH>
-//        , <&shifter 7 GPIO_ACTIVE_HIGH>
+        , <&shifter 6 GPIO_ACTIVE_HIGH>
+        , <&shifter 7 GPIO_ACTIVE_HIGH>
         ;
 };

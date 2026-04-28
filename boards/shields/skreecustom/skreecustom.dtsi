@@ -6,30 +6,6 @@
         zmk,matrix_transform = &default_transform;
     };
 
-    left_encoder_top: encoder_left_top {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-        status = "disabled";
-    };
-
-    left_encoder_bottom: encoder_left_bottom {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-        status = "disabled";
-    };
-
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-        status = "disabled";
-    };
-
 
      default_transform: keymap_transform_0 {
          compatible = "zmk,matrix-transform";
@@ -61,6 +37,36 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)	RC(3,7)	                RC(3,8) 
             , <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
             ;
 
+    };
+
+        left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <144>;
+        status = "disabled";
+    };
+
+        left_encoder_2: encoder_left_2 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <144>;
+        status = "disabled";
+    };
+
+    right_encoder: encoder_right {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <144>;
+        status = "disabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &left_encoder_2 &right_encoder>;
+        triggers-per-rotation = <36>;
     };
 };
 

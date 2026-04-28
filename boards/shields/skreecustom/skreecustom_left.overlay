@@ -1,19 +1,11 @@
 #include "skreecustom.dtsi"
 
-&left_encoder_top {
-    status = "okay";
+&left_encoder {
+	status = "okay";
 };
 
-&left_encoder_bottom {
-    status = "okay";
-};
-
-/ {
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder_top &left_encoder_bottom>;
-        triggers-per-rotation = <20>;
-    };
+&left_encoder_2 {
+	status = "okay";
 };
 
 &kscan0 {

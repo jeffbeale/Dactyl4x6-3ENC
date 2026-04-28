@@ -24,9 +24,7 @@ include:
 #     shield: lily58_right
   - board: seeeduino_xiao_ble
     shield: skreecustom_left
-    artifact-name: skreecustom_left_logging
   - board: seeeduino_xiao_ble
     shield: skreecustom_right
-    artifact-name: skreecustom_right_logging
 #  - board: seeeduino_xiao_ble
 #    shield: settings_reset 

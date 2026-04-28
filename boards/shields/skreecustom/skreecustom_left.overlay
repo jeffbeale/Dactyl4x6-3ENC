@@ -8,6 +8,14 @@
     status = "okay";
 };
 
+/ {
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder_top &left_encoder_bottom>;
+        triggers-per-rotation = <20>;
+    };
+};
+
 &kscan0 {
     col-gpios
         = <&shifter 0 GPIO_ACTIVE_HIGH>

@@ -19,6 +19,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        SpaceTapDance: SpaceTapDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACETAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp ENTER>;
+        };
     };
 
     keymap {
@@ -26,12 +33,12 @@
 
         letters {
             bindings = <
-&kp ESC    &kp N1                      &kp N2                      &kp N3                        &kp N4                          &kp N5  &kp F1            &kp N6  &kp N7                           &kp N8                         &kp N9                       &kp N0                       &kp MINUS
-&none      &kp Q                       &kp W                       &kp F                         &kp P                           &kp B                     &kp J   &kp L                            &kp U                          &kp Y                        &kp SEMICOLON                &kp LBKT
-&none      &HomerowHoldTap LEFT_GUI A  &HomerowHoldTap LEFT_ALT R  &HomerowHoldTap LEFT_SHIFT S  &HomerowHoldTap LEFT_CONTROL T  &kp G             &kp F2  &kp M   &HomerowHoldTap RIGHT_CONTROL N  &HomerowHoldTap RIGHT_SHIFT E  &HomerowHoldTap RIGHT_ALT I  &HomerowHoldTap RIGHT_GUI O  &kp SQT
-&kp GRAVE  &kp Z                       &kp X                       &kp C                         &kp D                           &kp V   &kp F3            &kp K   &kp H                            &kp COMMA                      &kp DOT                      &kp FSLH                     &kp BSLH
-                                                                                                 &none                           &none                     &none   &none
-                                                                   &kp BACKSPACE                 &kp SPACE                                                         &kp SPACE                        &kp BACKSPACE
+&kp ESC    &kp N1                      &kp N2                      &kp N3                         &kp N4                          &kp N5  &none               &kp N6  &kp N7                           &kp N8                            &kp N9                       &kp N0                       &kp MINUS
+&none      &kp Q                       &kp W                       &kp F                          &kp P                           &kp B                       &kp J   &kp L                            &kp U                             &kp Y                        &kp SEMICOLON                &kp LBKT
+&none      &HomerowHoldTap LEFT_GUI A  &HomerowHoldTap LEFT_ALT R  &HomerowHoldTap LEFT_SHIFT S   &HomerowHoldTap LEFT_CONTROL T  &kp G            &kp RC(M)  &kp M   &HomerowHoldTap RIGHT_CONTROL N  &HomerowHoldTap RIGHT_SHIFT E     &HomerowHoldTap RIGHT_ALT I  &HomerowHoldTap RIGHT_GUI O  &kp SQT
+&kp GRAVE  &kp Z                       &kp X                       &kp C                          &kp D                           &kp V   &none               &kp K   &kp H                            &kp COMMA                         &kp DOT                      &kp FSLH                     &kp BSLH
+                                                                                                  &none                           &none                       &none   &none
+                                                                   &HomerowHoldTap DEL BACKSPACE  &SpaceTapDance                                                      &SpaceTapDance                   &HomerowHoldTap DELETE BACKSPACE
             >;
 
             sensor-bindings =
@@ -44,12 +51,12 @@
 
         numpad_fkeys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans                    &trans  &trans
-                        &trans  &trans                                    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans           &trans           &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+                                &none   &none                     &none   &kp KP_NUMBER_0
+                        &trans  &trans                                    &trans           &trans
             >;
 
             sensor-bindings =

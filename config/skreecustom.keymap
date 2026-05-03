@@ -13,8 +13,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-
+        letters {
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3     &kp N4     &kp N5    &kp F1            &kp N6   &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
 &kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp T                       &kp Y    &kp U     &kp I      &kp O    &kp P     &kp LBKT
@@ -23,14 +22,16 @@
                                       &kp SPACE  &kp BSPC                    &kp DEL  &kp RET
                            &kp LCTRL  &kp LALT                                        &kp RGUI  &kp RCTRL
             >;
-            sensor-bindings = 
+
+            sensor-bindings =
                 <&inc_dec_kp PG_UP PG_DN>,
                 <&inc_dec_kp UP DOWN>,
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+            label = "Letters";
         };
 
-        layer_1 {
-
+        numpad_fkeys {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -39,14 +40,16 @@
                                 &trans  &trans                    &trans  &trans
                         &trans  &trans                                    &trans  &trans
             >;
-                        sensor-bindings = 
-                        <&inc_dec_kp PG_UP PG_DN>,
-                        <&inc_dec_kp UP DOWN>,
-                        <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+            sensor-bindings =
+                <&inc_dec_kp PG_UP PG_DN>,
+                <&inc_dec_kp UP DOWN>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+            label = "Numpad and Fkeys";
         };
 
-        layer_2 {
-
+        macros {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -55,14 +58,16 @@
                                 &trans  &trans                    &trans  &trans
                         &trans  &trans                                    &trans  &trans
             >;
-            sensor-bindings = 
+
+            sensor-bindings =
                 <&inc_dec_kp PG_UP PG_DN>,
                 <&inc_dec_kp UP DOWN>,
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+            label = "Macros";
         };
 
-        layer_3 {
-
+        configuration {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -71,10 +76,13 @@
                                 &trans  &trans                    &trans  &trans
                         &trans  &trans                                    &trans  &trans
             >;
-            sensor-bindings = 
+
+            sensor-bindings =
                 <&inc_dec_kp PG_UP PG_DN>,
                 <&inc_dec_kp UP DOWN>,
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
+            label = "Keyboard options";
         };
     };
 };

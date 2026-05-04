@@ -41,11 +41,11 @@
 &caps_word  &kp A   &kp R   &kp S           &kp T             &kp G                  &kp RC(M)  &kp M          &kp N           &kp E            &kp I    &kp O          &kp SQT
 &kp GRAVE   &kp Z   &kp X   &kp C           &kp D             &kp V         &none               &kp K          &kp H           &kp COMMA        &kp DOT  &kp FSLH       &kp BSLH
                                             &kp LEFT_CONTROL  &kp LEFT_ALT                      &kp RIGHT_GUI  &mo 1
-                            &kp LEFT_SHIFT  &kp BACKSPACE                                                      &SpaceTapDance  &kp RIGHT_SHIFT
+                            &kp LEFT_SHIFT  &SpaceTapDance                                                     &SpaceTapDance  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings =
-                <&inc_dec_kp PG_UP PG_DN>,
+                <&inc_dec_kp LC(Z) BACKSPACE>,
                 <&inc_dec_kp TAB LS(TAB)>,
                 <&inc_dec_kp UP_ARROW DOWN>;
 

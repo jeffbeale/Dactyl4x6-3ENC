@@ -36,12 +36,12 @@
 
         letters {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4            &kp N5        &none               &kp N6         &kp N7         &kp N8           &kp N9   &kp N0         &kp MINUS
-&kp DELETE  &kp Q   &kp W   &kp F           &kp P             &kp B                             &kp J          &kp L          &kp U            &kp Y    &kp SEMICOLON  &kp LBKT
-&caps_word  &kp A   &kp R   &kp S           &kp T             &kp G                  &kp RC(M)  &kp M          &kp N          &kp E            &kp I    &kp O          &kp SQT
-&kp GRAVE   &kp Z   &kp X   &kp C           &kp D             &kp V         &none               &kp K          &kp H          &kp COMMA        &kp DOT  &kp FSLH       &kp BSLH
+&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4            &kp N5        &none               &kp N6         &kp N7          &kp N8           &kp N9   &kp N0         &kp MINUS
+&kp DELETE  &kp Q   &kp W   &kp F           &kp P             &kp B                             &kp J          &kp L           &kp U            &kp Y    &kp SEMICOLON  &kp LBKT
+&caps_word  &kp A   &kp R   &kp S           &kp T             &kp G                  &kp RC(M)  &kp M          &kp N           &kp E            &kp I    &kp O          &kp SQT
+&kp GRAVE   &kp Z   &kp X   &kp C           &kp D             &kp V         &none               &kp K          &kp H           &kp COMMA        &kp DOT  &kp FSLH       &kp BSLH
                                             &kp LEFT_CONTROL  &kp LEFT_ALT                      &kp RIGHT_GUI  &mo 1
-                            &kp LEFT_SHIFT  &SpaceTapDance                                                     &kp BACKSPACE  &kp RIGHT_SHIFT
+                            &kp LEFT_SHIFT  &kp BACKSPACE                                                      &SpaceTapDance  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings =
@@ -72,12 +72,12 @@
 
         configuration {
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans      &trans        &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans      &trans        &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &bl BL_TOG  &bl BL_CYCLE  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans      &trans        &trans  &trans  &trans
-                                                  &trans        &trans                          &trans  &trans
-                                    &trans        &trans                                                &trans      &trans
+&trans  &kp C_BRI_UP  &kp C_BRIGHTNESS_DEC  &trans        &trans        &trans        &trans            &trans  &trans      &trans        &trans  &trans  &trans
+&trans  &trans        &trans                &trans        &trans        &trans                          &trans  &trans      &trans        &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &bl BL_TOG  &bl BL_CYCLE  &trans  &trans  &trans
+&trans  &trans        &trans                &trans        &trans        &trans        &trans            &trans  &trans      &trans        &trans  &trans  &trans
+                                                          &trans        &trans                          &trans  &trans
+                                            &trans        &trans                                                &trans      &trans
             >;
 
             sensor-bindings =

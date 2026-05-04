@@ -21,6 +21,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        CtlAltDel {
+            bindings = <&kp LC(RA(DEL))>;
+            key-positions = <0 57 29>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

@@ -42,12 +42,12 @@
 
         letters {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3         &kp N4            &kp N5        &none               &kp N6           &kp N7          &kp N8         &kp N9   &kp N0         &kp MINUS
-&kp DELETE  &kp Q   &kp W   &kp F          &kp P             &kp B                             &kp J            &kp L           &kp U          &kp Y    &kp SEMICOLON  &kp LBKT
-&caps_word  &kp A   &kp R   &kp S          &kp T             &kp G                  &kp RC(M)  &kp M            &kp N           &kp E          &kp I    &kp O          &kp SQT
-&kp GRAVE   &kp Z   &kp X   &kp C          &kp D             &kp V         &none               &kp K            &kp H           &kp COMMA      &kp DOT  &kp FSLH       &kp BSLH
-                                           &kp LEFT_CONTROL  &kp LEFT_GUI                      &kp RIGHT_SHIFT  &mo 1
-                            &kp BACKSPACE  &SpaceTapDance                                                       &SpaceTapDance  &kp RIGHT_ALT
+&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4          &kp N5         &none               &kp N6         &kp N7          &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp DELETE  &kp Q   &kp W   &kp F           &kp P           &kp B                              &kp J          &kp L           &kp U      &kp Y    &kp SEMICOLON  &kp LBKT
+&caps_word  &kp A   &kp R   &kp S           &kp T           &kp G                   &kp RC(M)  &kp M          &kp N           &kp E      &kp I    &kp O          &kp SQT
+&kp GRAVE   &kp Z   &kp X   &kp C           &kp D           &kp V          &none               &kp K          &kp H           &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
+                                            &SpaceTapDance  &kp BACKSPACE                      &kp BACKSPACE  &SpaceTapDance
+                            &kp LEFT_SHIFT  &kp LEFT_GUI                                                      &kp RIGHT_ALT   &mo 1
             >;
 
             sensor-bindings =
@@ -64,8 +64,8 @@
 &trans  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET                &trans  &kp RIGHT_BRACKET      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACE        &trans            &kp RIGHT_BRACE        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans   &trans
-                                &mo 2   &none                                   &none                  &trans
-                        &trans  &trans                                                                 &trans           &kp KP_NUMBER_0
+                                &mo 2   &none                                   &kp KP_NUMBER_0        &trans
+                        &trans  &trans                                                                 &trans           &trans
             >;
 
             sensor-bindings =
@@ -79,7 +79,7 @@
         configuration {
             bindings = <
 &trans  &kp C_BRI_UP  &kp C_BRIGHTNESS_DEC  &trans        &trans        &trans        &trans            &trans  &trans     &trans        &trans      &trans  &trans
-&trans  &trans        &trans                &trans        &trans        &trans                          &trans  &trans     &trans        &trans      &trans  &trans
+&trans  &bt BT_CLR    &trans                &trans        &trans        &trans                          &trans  &trans     &trans        &trans      &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans  &trans  &bl BL_ON  &bl BL_CYCLE  &bl BL_OFF  &none   &trans
 &trans  &trans        &trans                &trans        &trans        &trans        &trans            &trans  &trans     &trans        &trans      &trans  &trans
                                                           &trans        &trans                          &trans  &trans

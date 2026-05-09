@@ -74,7 +74,7 @@
             bindings = <
 &kp ESC     &kp N1  &kp N2  &kp N3          &kp N4          &kp N5         &none               &kp N6             &kp N7          &kp N8     &kp N9   &kp N0         &kp MINUS
 &kp GRAVE   &kp Q   &kp W   &kp F           &kp P           &kp B                              &kp J              &kp L           &kp U      &kp Y    &kp SEMICOLON  &kp LBKT
-&caps_word  &kp A   &kp R   &kp S           &kp T           &kp G                   &kp RC(M)  &kp M              &kp N           &kp E      &kp I    &kp O          &kp SQT
+&mo 2       &kp A   &kp R   &kp S           &kp T           &kp G                   &kp RC(M)  &kp M              &kp N           &kp E      &kp I    &kp O          &kp SQT
 &kp DELETE  &kp Z   &kp X   &kp C           &kp D           &kp V          &none               &kp K              &kp H           &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
                                             &SpaceTapDance  &kp BACKSPACE                      &kp RIGHT_CONTROL  &SpaceTapDance
                             &kp LEFT_SHIFT  &kp LEFT_GUI                                                          &kp RIGHT_ALT   &mo 1
@@ -90,12 +90,12 @@
 
         numpad_fkeys {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                &trans            &kp F7                 &kp F8           &kp F9           &kp F10          &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET                &trans  &kp RIGHT_BRACKET      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACE        &trans            &kp RIGHT_BRACE        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans   &trans
-                                &mo 2   &none                                   &kp KP_NUMBER_0        &trans
-                        &trans  &trans                                                                 &trans           &trans
+&kp F1        &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                &trans            &kp F7                 &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp KP_MINUS  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans   &trans   &trans
+&kp KP_PLUS   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LEFT_BRACKET                &trans  &kp RIGHT_BRACKET      &trans  &trans  &trans   &trans   &trans
+&none         &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LEFT_BRACE        &trans            &kp RIGHT_BRACE        &trans  &trans  &trans   &trans   &trans
+                                                                 &kp KP_NUMBER_0  &trans                                  &trans                 &trans
+                                                &trans           &trans                                                                          &trans  &trans
             >;
 
             sensor-bindings =
@@ -108,12 +108,12 @@
 
         configuration {
             bindings = <
-&trans  &kp C_BRI_UP  &kp C_BRIGHTNESS_DEC  &trans  &trans  &trans  &trans            &trans           &trans           &trans           &trans           &trans  &rgb_ug RGB_TOG
-&trans  &none         &trans                &trans  &trans  &trans                    &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &trans  &trans
-&trans  &none         &none                 &none   &none   &none             &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &none   &trans
-&trans  &trans        &trans                &trans  &trans  &trans  &trans            &trans           &trans           &trans           &trans           &trans  &trans
-                                                    &trans  &trans                    &trans           &trans
-                                            &trans  &trans                                             &trans           &trans
+&trans  &none   &none   &trans  &trans  &trans  &trans            &trans           &trans           &trans           &trans           &trans  &rgb_ug RGB_TOG
+&trans  &none   &trans  &trans  &trans  &trans                    &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &trans  &kp C_BRIGHTNESS_INC
+&trans  &none   &none   &none   &none   &none             &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &none   &kp C_BRIGHTNESS_DEC
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans           &trans           &trans           &trans           &trans  &trans
+                                &trans  &trans                    &trans           &trans
+                        &trans  &trans                                             &trans           &trans
             >;
 
             sensor-bindings =
@@ -122,24 +122,6 @@
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
             label = "Keyboard options";
-        };
-
-        macros {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans                    &trans  &trans
-                        &trans  &trans                                    &trans  &trans
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp PG_UP PG_DN>,
-                <&inc_dec_kp UP DOWN>,
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-
-            label = "Macros";
         };
     };
 };

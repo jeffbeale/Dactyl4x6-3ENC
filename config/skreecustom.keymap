@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -107,12 +108,12 @@
 
         configuration {
             bindings = <
-&trans  &kp C_BRI_UP  &kp C_BRIGHTNESS_DEC  &trans  &trans  &trans  &trans            &trans  &trans  &trans        &trans  &trans  &trans
-&trans  &none         &trans                &trans  &trans  &trans                    &trans  &trans  &trans        &trans  &trans  &trans
-&trans  &none         &none                 &none   &none   &none             &trans  &trans  &none   &bl BL_CYCLE  &none   &none   &trans
-&trans  &trans        &trans                &trans  &trans  &trans  &trans            &trans  &trans  &trans        &trans  &trans  &trans
-                                                    &trans  &trans                    &trans  &trans
-                                            &trans  &trans                                    &trans  &trans
+&trans  &kp C_BRI_UP  &kp C_BRIGHTNESS_DEC  &trans  &trans  &trans  &trans            &trans           &trans           &trans           &trans           &trans  &trans
+&trans  &none         &trans                &trans  &trans  &trans                    &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &trans  &trans
+&trans  &none         &none                 &none   &none   &none             &trans  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &none   &trans
+&trans  &trans        &trans                &trans  &trans  &trans  &trans            &trans           &trans           &trans           &trans           &trans  &trans
+                                                    &trans  &trans                    &trans           &trans
+                                            &trans  &trans                                             &trans           &trans
             >;
 
             sensor-bindings =

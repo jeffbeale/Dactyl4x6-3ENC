@@ -20,6 +20,16 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp ENTER>;
         };
+
+        hold_tap_thumbs: hold_tap_thumbs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_THUMBS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+        };
     };
 
     combos {
@@ -72,12 +82,12 @@
 
         letters {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4          &kp N5         &none               &kp N6             &kp N7          &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp GRAVE   &kp Q   &kp W   &kp F           &kp P           &kp B                              &kp J              &kp L           &kp U      &kp Y    &kp SEMICOLON  &kp LBKT
-&mo 2       &kp A   &kp R   &kp S           &kp T           &kp G                   &kp RC(M)  &kp M              &kp N           &kp E      &kp I    &kp O          &kp SQT
-&kp DELETE  &kp Z   &kp X   &kp C           &kp D           &kp V          &none               &kp K              &kp H           &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
-                                            &SpaceTapDance  &kp BACKSPACE                      &kp RIGHT_CONTROL  &SpaceTapDance
-                            &kp LEFT_SHIFT  &kp LEFT_GUI                                                          &kp RIGHT_ALT   &mo 1
+&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4          &kp N5         &none               &kp N6                                    &kp N7          &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp GRAVE   &kp Q   &kp W   &kp F           &kp P           &kp G                              &kp J                                     &kp L           &kp U      &kp Y    &kp SEMICOLON  &kp LBKT
+&mo 2       &kp A   &kp R   &kp S           &kp T           &kp D                   &kp RC(M)  &kp H                                     &kp N           &kp E      &kp I    &kp O          &kp SQT
+&kp DELETE  &kp Z   &kp X   &kp C           &kp V           &kp B          &none               &kp K                                     &kp M           &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
+                                            &SpaceTapDance  &kp BACKSPACE                      &hold_tap_thumbs RIGHT_CONTROL BACKSPACE  &SpaceTapDance
+                            &kp LEFT_SHIFT  &kp LEFT_GUI                                                                                 &kp RIGHT_ALT   &mo 1
             >;
 
             sensor-bindings =

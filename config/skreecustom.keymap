@@ -30,6 +30,16 @@
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
         };
+
+        hold_tap_thumbs2: hold_tap_thumbs2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_THUMBS2";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+        };
     };
 
     combos {
@@ -82,16 +92,16 @@
 
         letters {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4          &kp N5         &none               &kp N6                                    &kp N7          &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp GRAVE   &kp Q   &kp W   &kp F           &kp P           &kp G                              &kp J                                     &kp L           &kp U      &kp Y    &kp SEMICOLON  &kp LBKT
-&mo 2       &kp A   &kp R   &kp S           &kp T           &kp D                   &kp RC(M)  &kp H                                     &kp N           &kp E      &kp I    &kp O          &kp SQT
-&kp DELETE  &kp Z   &kp X   &kp C           &kp V           &kp B          &none               &kp K                                     &kp M           &kp COMMA  &kp DOT  &kp FSLH       &kp BSLH
-                                            &SpaceTapDance  &kp BACKSPACE                      &hold_tap_thumbs RIGHT_CONTROL BACKSPACE  &SpaceTapDance
-                            &kp LEFT_SHIFT  &kp LEFT_GUI                                                                                 &kp RIGHT_ALT   &mo 1
+&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4                     &kp N5         &none               &kp N6                                    &kp N7                     &kp N8           &kp N9   &kp N0         &kp MINUS
+&kp GRAVE   &kp Q   &kp W   &kp F           &kp P                      &kp G                              &kp J                                     &kp L                      &kp U            &kp Y    &kp SEMICOLON  &kp LBKT
+&mo 2       &kp A   &kp R   &kp S           &kp T                      &kp D                   &kp RC(M)  &kp H                                     &kp N                      &kp E            &kp I    &kp O          &kp SQT
+&kp DELETE  &kp Z   &kp X   &kp C           &kp V                      &kp B          &none               &kp K                                     &kp M                      &kp COMMA        &kp DOT  &kp FSLH       &kp BSLH
+                                            &hold_tap_thumbs2 1 SPACE  &kp BACKSPACE                      &hold_tap_thumbs RIGHT_CONTROL BACKSPACE  &hold_tap_thumbs2 1 ENTER
+                            &kp LEFT_SHIFT  &kp LEFT_GUI                                                                                            &kp RIGHT_ALT              &kp RIGHT_SHIFT
             >;
 
             sensor-bindings =
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp LEFT RIGHT>,
                 <&inc_dec_kp TAB LS(TAB)>,
                 <&inc_dec_kp UP_ARROW DOWN>;
 
@@ -103,7 +113,7 @@
 &kp F1        &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                &trans            &kp F7                 &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &kp KP_MINUS  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans   &trans   &trans
 &kp KP_PLUS   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LEFT_BRACKET                &trans  &kp RIGHT_BRACKET      &trans  &trans  &trans   &trans   &trans
-&none         &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LEFT_BRACE        &trans            &kp RIGHT_BRACE        &trans  &trans  &trans   &trans   &trans
+&mo 2         &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LEFT_BRACE        &trans            &kp RIGHT_BRACE        &trans  &trans  &trans   &trans   &trans
                                                                  &kp KP_NUMBER_0  &trans                                  &trans                 &trans
                                                 &trans           &trans                                                                          &trans  &trans
             >;
@@ -111,7 +121,7 @@
             sensor-bindings =
                 <&inc_dec_kp LC(BACKSPACE) LC(Z)>,
                 <&inc_dec_kp TAB LS(TAB)>,
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
 
             label = "Numpad and Fkeys";
         };

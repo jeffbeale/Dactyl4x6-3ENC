@@ -49,6 +49,8 @@
             bindings = <&kp LC(RA(DEL))>;
             key-positions = <0 57 29>;
             layers = <0>;
+            timeout-ms = <500>;
+            require-prior-idle-ms = <300>;
         };
 
         BluetoothProfile1 {
@@ -92,12 +94,12 @@
 
         letters {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3          &kp N4                     &kp N5         &none               &kp N6                                    &kp N7                     &kp N8           &kp N9   &kp N0         &kp MINUS
-&kp GRAVE   &kp Q   &kp W   &kp F           &kp P                      &kp G                              &kp J                                     &kp L                      &kp U            &kp Y    &kp SEMICOLON  &kp LBKT
-&mo 2       &kp A   &kp R   &kp S           &kp T                      &kp D                   &kp RC(M)  &kp H                                     &kp N                      &kp E            &kp I    &kp O          &kp SQT
-&kp DELETE  &kp Z   &kp X   &kp C           &kp V                      &kp B          &none               &kp K                                     &kp M                      &kp COMMA        &kp DOT  &kp FSLH       &kp BSLH
-                                            &hold_tap_thumbs2 1 SPACE  &kp BACKSPACE                      &hold_tap_thumbs RIGHT_CONTROL BACKSPACE  &hold_tap_thumbs2 1 ENTER
-                            &kp LEFT_SHIFT  &kp LEFT_GUI                                                                                            &kp RIGHT_ALT              &kp RIGHT_SHIFT
+&kp ESC     &kp N1  &kp N2  &kp N3            &kp N4        &kp N5         &none               &kp N6                                    &kp N7         &kp N8           &kp N9   &kp N0         &kp MINUS
+&kp GRAVE   &kp Q   &kp W   &kp F             &kp P         &kp G                              &kp J                                     &kp L          &kp U            &kp Y    &kp SEMICOLON  &kp LBKT
+&kp EQUAL   &kp A   &kp R   &kp S             &kp T         &kp D                   &kp RC(M)  &kp H                                     &kp N          &kp E            &kp I    &kp O          &kp SQT
+&kp DELETE  &kp Z   &kp X   &kp C             &kp V         &kp B          &none               &kp K                                     &kp M          &kp COMMA        &kp DOT  &kp FSLH       &kp BSLH
+                                              &lt 1 ENTER   &kp BACKSPACE                      &hold_tap_thumbs RIGHT_CONTROL BACKSPACE  &lt 1 SPACE
+                            &kp LEFT_CONTROL  &kp LEFT_GUI                                                                               &kp RIGHT_ALT  &kp RIGHT_SHIFT
             >;
 
             sensor-bindings =
@@ -110,12 +112,12 @@
 
         numpad_fkeys {
             bindings = <
-&kp F1        &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                &trans            &kp F7                 &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp KP_MINUS  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LEFT_PARENTHESIS                    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans   &trans   &trans
-&kp KP_PLUS   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LEFT_BRACKET                &trans  &kp RIGHT_BRACKET      &trans  &trans  &trans   &trans   &trans
-&mo 2         &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LEFT_BRACE        &trans            &kp RIGHT_BRACE        &trans  &trans  &trans   &trans   &trans
-                                                                 &kp KP_NUMBER_0  &trans                                  &trans                 &trans
-                                                &trans           &trans                                                                          &trans  &trans
+&kp F1        &kp F2           &kp F3           &kp F4           &kp F5           &kp F6      &trans            &kp F7                &kp F8                 &kp F9  &kp F10  &kp F11  &kp F12
+&kp KP_MINUS  &kp KP_DIVIDE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans   &trans   &trans
+&kp KP_PLUS   &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none                 &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans   &trans   &trans
+&mo 2         &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT  &trans            &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans   &trans   &mo 2
+                                                                 &trans           &trans                        &trans                &trans
+                                                &trans           &trans                                                               &trans                 &trans
             >;
 
             sensor-bindings =
